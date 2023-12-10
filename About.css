@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:gray;
+}
+/*About Section Header Information*/
+
+.about-header{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    color:white;
+   
+    border-bottom: 5px solid lightcoral;
+}
+.about-header-photo{
+    width: 100px;
+    height: 100px;
+    border: 4px solid blue;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left:20px;
+}
+.about-header-desc{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    text-align: justify;
+}
+.about-header-desc h1{
+
+
+
+    color:white;
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.about-header-desc p{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+            /*The Grid Area and Grid Template Areas Usage*/
+
+            .grid1{grid-area: header;}
+            .grid2{grid-area: menu;}
+            .grid3{grid-area: main;}
+            .grid4{grid-area: aside;}
+            .grid5{grid-area: footer;}
+
+
+.grid-container{
+    display: grid;
+    /*grid-template-columns: auto auto auto auto auto;
+    margin: 10px;*/
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main aside aside'
+    'menu footer footer footer footer footer';
+
+
+}
+.grid-container > div{
+    border: 2px solid green;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: chocolate;
+
+}
+/*
+.grid1{
+    grid-column: 1 / 6;
+}
+.grid2{
+    grid-row: 2 / 4;
+}
+.grid3{
+    grid-column: 2 / 4;
+}
+.grid4{
+   grid-column:  4 / 6;
+}
+
+.grid5{
+    grid-column: 2 / 6;
+}*/
+    /*The Grid 2 With Grid Autofill minmax properties-*/
+    .grid2-header{
+        text-align: center;
+        margin: 2%;
+    }
+    .grid2-header h2{
+        color:blue;
+        padding: 10px;
+        background-color: chocolate;
+        display: inline;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+
+    .grid2-header p{
+        font-size: 18px;
+        color:white;
+    }
+.grid2-container{
+    display: grid;
+    background-color: brown;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+}
+.grid2-container > div{
+    border: 2px solid black;
+    font-size: 18px;
+    transition: 0.9s;
+}
+.p1 img{
+    width:100px;
+    height:100px;
+    border:1px solid blue;
+    border-radius: 50%;
+}
+.grid2-container > div:hover{
+    background-color: coral;
+    color:gray;
+    transform: scale(1.1) rotate(360deg);
+    border-radius: 10px;
+    margin: 10px;
+
+}
